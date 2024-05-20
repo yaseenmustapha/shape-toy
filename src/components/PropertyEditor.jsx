@@ -80,7 +80,7 @@ export default function PropertyEditor() {
             </label>
           )}
 
-          {/* {selectedShape.scale && (
+          {selectedShape.scale && (
             <label>
               Scale:
               <input
@@ -99,7 +99,7 @@ export default function PropertyEditor() {
               />
               {selectedShape.scale}
             </label>
-          )} */}
+          )}
 
           {selectedShape.fill && (
             <label>
