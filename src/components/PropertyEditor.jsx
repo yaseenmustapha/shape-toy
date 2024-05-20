@@ -2,7 +2,7 @@ import { useShapeContext } from "../ShapeContext";
 import { CANVAS_HEIGHT, CANVAS_WIDTH } from "../config";
 
 export default function PropertyEditor() {
-  const { shapes, updateShape } = useShapeContext();
+  const { shapes, updateShape, deleteShape } = useShapeContext();
   const selectedShapes = shapes.filter((shape) => shape.selected);
 
   const handlePropertyChange = (shapeId, property, value) => {
@@ -114,6 +114,13 @@ export default function PropertyEditor() {
               />
             </label>
           )}
+
+          <button
+            className="delete-button"
+            onClick={() => {
+              deleteShape(selectedShape.id);
+            }}
+          >Delete shape</button>
 
           {index < selectedShapes.length - 1 && (
             <div className="separator"></div>

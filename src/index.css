@@ -55,6 +55,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.delete-button:hover {
+  border-color: darkred;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
